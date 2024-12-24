@@ -87,4 +87,5 @@
 <tr><td>2024-12-26</td><td><img src="https://cdn.weatherapi.com/weather/64x64/day/122.png" alt="Weather Condition Icon"/></td><td>Overcast </td><td>Waning Crescent</td><td><img src="https://raw.githubusercontent.com/MaarceloLuiz/springboot-weather-forecast/main/assets/img/Waning Crescent.png" alt="Moon Phase Icon" style="width:50px; height:50px;"/></td><td>8.3 - 11.6 °C</td><td>10.1 kph</td></tr>
 </table>
 
+*Updated at: 2024-12-24 21:16*- by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)
 *Updated at: 2024-12-24 21:16*<!-- WEATHER-END -->
