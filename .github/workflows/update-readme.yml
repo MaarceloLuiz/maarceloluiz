@@ -1,4 +1,4 @@
-name: Embed Weather Forecast to Profile
+name: Update Weather Forecast
 
 on:
   schedule:
