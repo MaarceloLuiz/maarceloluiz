@@ -24,7 +24,7 @@ jobs:
         echo " - by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)" > weather-meta.md
         
         # Replacing the weather section in README
-        awk '/<!-- WEATHER-START -->/{print; system("cat weather-readme.md weather-meta.md"); next} /<!-- WEATHER-END -->/{print; exit} 1' README.md > temp.md
+        awk '/<!-- WEATHER-START -->/{print; system("cat weather-readme.md weather-meta.md"); next} /<!-- WEATHER-END -->/{start=0} !start' README.md > temp.md
         mv temp.md README.md
 
     - name: Commit and Push Changes
