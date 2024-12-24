@@ -1,0 +1,36 @@
+name: Embed Weather Forecast to Profile
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # Runs daily at 9 AM UTC
+  workflow_dispatch:
+
+jobs:
+  update-profile-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out Profile Repository
+      uses: actions/checkout@v3
+
+    - name: Fetch Weather README
+      run: |
+        git clone https://github.com/MaarceloLuiz/springboot-weather-forecast.git weather-repo
+        cd weather-repo
+        cp README.md ../weather-readme.md
+
+    - name: Update Profile README
+      run: |
+        echo " - by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)" > weather-meta.md
+        
+        # Replacing the weather section in README
+        awk '/<!-- WEATHER-START -->/{print; system("cat weather-readme.md weather-meta.md"); next} /<!-- WEATHER-END -->/{print; exit} 1' README.md > temp.md
+        mv temp.md README.md
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add README.md
+        git commit -m "Update weather forecast" || echo "No changes to commit"
+        git push origin main
