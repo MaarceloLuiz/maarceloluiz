@@ -77,3 +77,5 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=maarceloluiz&theme=monokai&fire=fff" alt="GitHub Streak" height="180"/>
 </div>
 
+<!-- WEATHER-START -->
+<!-- WEATHER-END -->
