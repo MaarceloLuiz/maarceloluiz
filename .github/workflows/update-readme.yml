@@ -21,13 +21,13 @@ jobs:
 
     - name: Update Profile README
       run: |
-        cat weather-readme.md > weather-section.md
-        echo " - by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)" > weather-meta.md
-        
-        # Replacing the weather section in README
-        sed -e '/<!-- WEATHER-START -->/,/<!-- WEATHER-END -->/{/<!-- WEATHER-START -->/!{/<!-- WEATHER-END -->/!d}}' README.md > temp.md
-        mv temp.md README.md
-        sed -i '/<!-- WEATHER-START -->/r weather-section.md' README.md
+        {
+          cat weather-readme.md
+          echo "- by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)"
+        } > weather-section.md
+
+        #Updating Weather Section
+        sed -i '/<!-- WEATHER-START -->/,/<!-- WEATHER-END -->/{/<!-- WEATHER-START -->/!{/<!-- WEATHER-END -->/!d}}; /<!-- WEATHER-START -->/r weather-section.md' README.md
 
     - name: Commit and Push Changes
       run: |
