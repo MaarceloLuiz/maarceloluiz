@@ -116,5 +116,5 @@ Waning Crescent
 *Updated at: 2024-12-25 22:40*
 
 <!-- FORECAST-TABLE-END -->
- *- by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*
+*by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*
 <!-- WEATHER-END -->
