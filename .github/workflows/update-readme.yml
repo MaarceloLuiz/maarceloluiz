@@ -18,11 +18,14 @@ jobs:
         git clone https://github.com/MaarceloLuiz/springboot-weather-forecast.git weather-repo
         cd weather-repo
         cp README.md ../weather-readme.md
+        
+        # Extract the forecast table from the README
+        sed -n '/<!-- FORECAST-TABLE-START -->/,/<!-- FORECAST-TABLE-END -->/p' weather-readme.md > ../forecast-section.md
 
     - name: Update Profile README
       run: |
         {
-          cat weather-readme.md
+          cat forecast-section.md
           echo " *- by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*"
         } > weather-section.md
 
