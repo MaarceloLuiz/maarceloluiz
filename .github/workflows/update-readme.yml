@@ -6,17 +6,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  update-weather-forecast:
+    uses: MaarceloLuiz/springboot-weather-forecast/.github/workflows/update-weather.yml@main
+    with:
+      WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+      FORECAST_CITY: ${{ vars.FORECAST_CITY }}
+      FORECAST_DAYS: ${{ vars.FORECAST_DAYS }}
+        
   update-profile-readme:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Call Weather Forecast Workflow
-      uses: MaarceloLuiz/springboot-weather-forecast/.github/workflows/update-weather.yml@main
-      with:
-        WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        FORECAST_CITY: ${{ vars.FORECAST_CITY }}
-        FORECAST_DAYS: ${{ vars.FORECAST_DAYS }}
-
     - name: Check out Profile Repository
       uses: actions/checkout@v3
 
