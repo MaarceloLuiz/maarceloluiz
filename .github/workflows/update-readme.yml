@@ -10,16 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out Profile Repository
-      uses: actions/checkout@v3
+    - name: Generate Weather Table
+      uses: MaarceloLuiz/springboot-weather-forecast@v1.0.0  # Use your action
+      with:
+        weather-api-key: ${{ secrets.WEATHER_API_KEY }}
+        city: ${{ vars.FORECAST_CITY }}
+        days: ${{ vars.FORECAST_DAYS }}
 
-    - name: Fetch Weather README
+    - name: Extract Weather table from README
       run: |
-        git clone https://github.com/MaarceloLuiz/springboot-weather-forecast.git weather-repo
-        cd weather-repo
-        # cp README.md ../weather-readme.md
-        
-        # Extract the forecast table from the README
         sed -n '/<!-- FORECAST-TABLE-START -->/,/<!-- FORECAST-TABLE-END -->/p' README.md > ../forecast-section.md
 
     - name: Update Profile README
