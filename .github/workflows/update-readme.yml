@@ -1,40 +1,31 @@
-name: Update Weather Forecast
+name: "Update Weather"
 
 on:
-  schedule:
-    - cron: '0 9 * * *' # Runs daily at 9 AM UTC
   workflow_dispatch:
-
+  schedule:
+    - cron: "0 9 * * *" 
+  
 jobs:
-  update-profile-readme:
+  run-weather-app:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-    - name: Generate Weather Table
-      uses: MaarceloLuiz/springboot-weather-forecast@v1.0.0  # Use your action
-      with:
-        weather-api-key: ${{ secrets.WEATHER_API_KEY }}
-        city: ${{ vars.FORECAST_CITY }}
-        days: ${{ vars.FORECAST_DAYS }}
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-    - name: Extract Weather table from README
-      run: |
-        sed -n '/<!-- FORECAST-TABLE-START -->/,/<!-- FORECAST-TABLE-END -->/p' README.md > ../forecast-section.md
+      - name: Run Action
+        uses: MaarceloLuiz/springboot-weather-forecast@v1.0.2
+        with:
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          FORECAST_CITY: ${{ vars.FORECAST_CITY }}
+          FORECAST_DAYS: ${{ vars.FORECAST_DAYS }}
+          TABLE_TYPE: ${{ vars.TABLE_TYPE }}
 
-    - name: Update Profile README
-      run: |
-        {
-          cat forecast-section.md
-          echo "*by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*"
-        } > weather-section.md
-
-        #Updating Weather Section
-        sed -i '/<!-- WEATHER-START -->/,/<!-- WEATHER-END -->/{/<!-- WEATHER-START -->/!{/<!-- WEATHER-END -->/!d}}; /<!-- WEATHER-START -->/r weather-section.md' README.md
-
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add README.md
-        git commit -m "Update weather forecast" || echo "No changes to commit"
-        git push origin main
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update weather forecast" || echo "No changes to commit"
+          git push origin main
