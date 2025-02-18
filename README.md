@@ -71,11 +71,13 @@
   </a>
 </p>
 
+<!--
 <h3 align="left">GitHub Stats:</h3>
 <div align="left">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=maarceloluiz&show_icons=true&locale=en&layout=compact&theme=monokai" alt="Most Used Languages" height="180"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=maarceloluiz&theme=monokai&fire=fff" alt="GitHub Streak" height="180"/>
 </div>
+-->
 
 <!--## Hourly Forecast-->
 <!-- HOURLY-START -->
