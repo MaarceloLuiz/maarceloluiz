@@ -1,18 +1,15 @@
-<!--
-<div align="center">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWlveWI5cmlodjU3cDZrZGx5MzJxMDNpMmM2eDkzYmo4a3FhdzRmeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiIzJSKB4l7xTouE8/giphy.webp" alt="Hello There" width="400" />
-</div>
-<h1 align="center">Hello there!👋, I'm Marcelo Luiz</h1>
-<h3 align="center">A Java Developer currently pursuing a degree in Computer Science</h3>
-<br>
-<img align="right" alt"simpsons coding" width="400" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGVtcWg2dnEzdWE5dGFna290dWF2b2tlMjlncWlhaDNsbjk0b2RnYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3orif0rjs49gsPWg1y/giphy.webp"> 
--->
+<!-- Light theme -->
+![3D Contribution Graph Light](./profile-3d-contrib/profile-green.svg#gh-light-mode-only)
+<!-- Dark theme -->
+![3D Contribution Graph Dark](./profile-3d-contrib/profile-night-green.svg#gh-dark-mode-only)
 
+<!--
 ## Hi, I'm Marcelo Luiz! 👋
 
 - 💬 Passionate about Java and Spring Boot development.
 - 👨‍💻 Currently pursuing a degree in Computer Science.
 - ⚡ Feel free to reach out to share knowledge, learn together, or collaborate on projects 🤝.
+-->
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
