@@ -1,0 +1,131 @@
+name: Risk Intake Form
+description: Submit a security risk intake request for review and processing.
+title: "[Risk Intake] "
+labels: ["risk-intake", "security"]
+
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Brief title describing the risk issue
+      placeholder: Write something
+    validations:
+      required: true
+
+  - type: input
+    id: documentation
+    attributes:
+      label: Documentation
+      description: Link to relevant documentation or issue
+      placeholder: Write something
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification
+      description: Provide detailed justification for this request
+      placeholder: Write something
+    validations:
+      required: true
+
+  - type: input
+    id: issue_owner_email
+    attributes:
+      label: Issue owner (Email)
+      description: Email address of the person responsible for this issue
+      placeholder: Enter an email ABC@ibm.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cloud
+    attributes:
+      label: Which cloud?
+      description: Select the cloud platform
+      options:
+        - IBM
+        - AWS
+        - AZURE
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request Type
+      description: Select the type of request
+      options:
+        - Deviation
+        - Exception
+        - False Positive
+    validations:
+      required: true
+
+  - type: dropdown
+    id: redhat_third_party
+    attributes:
+      label: Is this a Redhat/Third-Party Dependency?
+      description: Select whether this involves Redhat or third-party dependencies
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: support_tickets
+    attributes:
+      label: Do you have support tickets open? Provide links if available
+      description: List any related support tickets with links
+      placeholder: Write something
+    validations:
+      required: false
+
+  - type: textarea
+    id: git_issue_ids
+    attributes:
+      label: Git Issue id(s)
+      description: Enter comma separated git issue IDs
+      placeholder: Enter comma separated git issue IDs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_severity
+    attributes:
+      label: Issue Severity
+      description: Select the severity level
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_source
+    attributes:
+      label: Issue Source
+      description: Select the source that identified this issue
+      options:
+        - SAST
+        - DAST
+        - NESSUS
+        - SECURITYHUB
+        - MEND
+        - TWISTLOCK
+        - PENTEST
+    validations:
+      required: true
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Due date
+      description: Select a due date for this issue
+      placeholder: Select a date (YYYY-MM-DD)
+    validations:
+      required: false
