@@ -33,6 +33,12 @@
   <a href="https://learn.microsoft.com/en-us/dotnet/"> 
     <img src="https://github.com/devicons/devicon/blob/master/icons/dot-net/dot-net-plain-wordmark.svg" alt="dot-net" width="40" height="40"/> 
   </a>
+  <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40" />
+  </a>
+  <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" />
+  </a>
 
   <!-- Cloud Platforms -->
   <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
