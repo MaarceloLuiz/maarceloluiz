@@ -3,7 +3,8 @@ name: "Update Weather"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *" 
+    - cron: "0 9,21 * * *"
+    # - cron: "0 9,17 * * *"
   
 jobs:
   run-weather-app:
