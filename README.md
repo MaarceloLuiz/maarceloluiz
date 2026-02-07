@@ -1,7 +1,9 @@
-<!-- Light theme -->
+<!--
+// Light theme
 ![3D Contribution Graph Light](./profile-3d-contrib/profile-green.svg#gh-light-mode-only)
-<!-- Dark theme -->
+// Dark theme 
 ![3D Contribution Graph Dark](./profile-3d-contrib/profile-night-green.svg#gh-dark-mode-only)
+-->
 
 <!--
 ## Hi, I'm Marcelo Luiz! 👋
