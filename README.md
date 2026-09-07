@@ -118,7 +118,7 @@ Waning Crescent
 <td>14.9 °C</td><td>13.9 °C</td><td>13.5 °C</td><td>13.3 °C</td><td>13.2 °C</td><td>12.9 °C</td><td>12.3 °C</td><td>12.2 °C</td><td>12.4 °C</td><td>13.1 °C</td><td>13.9 °C</td><td>15.8 °C</td><td>16.9 °C</td><td>17.3 °C</td><td>17.3 °C</td><td>17.6 °C</td><td>17.0 °C</td><td>14.7 °C</td><td>11.7 °C</td><td>10.6 °C</td><td>10.2 °C</td><td>10.2 °C</td><td>10.7 °C</td><td>10.2 °C</td></tr><tr><th>Wind</th>
 <td>13.3 kph</td><td>15.1 kph</td><td>15.8 kph</td><td>17.6 kph</td><td>15.5 kph</td><td>16.2 kph</td><td>14.8 kph</td><td>15.1 kph</td><td>14.4 kph</td><td>14.0 kph</td><td>15.8 kph</td><td>22.3 kph</td><td>23.8 kph</td><td>24.5 kph</td><td>22.0 kph</td><td>22.7 kph</td><td>20.5 kph</td><td>23.4 kph</td><td>15.5 kph</td><td>15.8 kph</td><td>13.3 kph</td><td>14.8 kph</td><td>16.6 kph</td><td>16.6 kph</td></tr></table>
 
-*Updated at: 2026-09-07 14:53 by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*
+*Updated at: 2026-09-07 20:23 by [MaarceloLuiz/springboot-weather-forecast](https://github.com/MaarceloLuiz/springboot-weather-forecast)*
 
 
 <!-- HOURLY-END -->
